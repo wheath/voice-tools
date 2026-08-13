@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Voice Tools — Try These</title>
+<style>
+  :root{
+    --bg:#0f1115; --card:#1a1d24; --card2:#20242d; --ink:#e8eaed; --muted:#a3a9b5;
+    --line:#2b303b; --accent:#6ea8fe; --accent-ink:#0b1220; --yes:#4ec98f; --no:#8b93a1;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#f6f7f9; --card:#ffffff; --card2:#f0f2f5; --ink:#1a1d24; --muted:#5b6270;
+      --line:#e3e6eb; --accent:#2f6fed; --accent-ink:#ffffff; --yes:#1a9e6b; --no:#7a828f; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;}
+  .wrap{max-width:960px;margin:0 auto;padding:40px 20px 64px;}
+  header{text-align:center;margin-bottom:8px;}
+  h1{font-size:30px;margin:0 0 6px;letter-spacing:-.02em;}
+  .sub{color:var(--muted);max-width:620px;margin:0 auto 8px;}
+  .how{background:var(--card2);border:1px solid var(--line);border-radius:14px;
+    padding:16px 18px;margin:22px auto 30px;max-width:680px;color:var(--muted);font-size:14.5px;}
+  .how b{color:var(--ink);}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;
+    display:flex;flex-direction:column;gap:10px;}
+  .card h3{margin:0;font-size:18px;}
+  .tags{display:flex;gap:8px;flex-wrap:wrap;}
+  .tag{font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;border:1px solid var(--line);}
+  .tag.browser{color:var(--accent);border-color:color-mix(in srgb,var(--accent) 45%,var(--line));}
+  .tag.clone-yes{color:var(--yes);border-color:color-mix(in srgb,var(--yes) 45%,var(--line));}
+  .tag.clone-no{color:var(--no);}
+  .desc{color:var(--muted);font-size:14.5px;margin:0;flex:1;}
+  .open{margin-top:4px;display:inline-block;text-align:center;text-decoration:none;
+    background:var(--accent);color:var(--accent-ink);font-weight:600;padding:10px 14px;border-radius:11px;
+    transition:transform .06s ease, opacity .15s ease;}
+  .open:hover{opacity:.92;}
+  .open:active{transform:translateY(1px);}
+  .power{margin:34px 0 0;background:linear-gradient(180deg,var(--card2),var(--card));
+    border:1px solid var(--line);border-radius:16px;padding:22px;}
+  .power h2{margin:0 0 6px;font-size:20px;}
+  .power p{color:var(--muted);margin:0 0 14px;}
+  .note{margin-top:26px;font-size:13.5px;color:var(--muted);text-align:center;
+    border-top:1px solid var(--line);padding-top:18px;}
+  footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px;}
+  a.inline{color:var(--accent);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🎙️ AI Voice Tools — Try These</h1>
+    <p class="sub">Free ways to turn text into speech — some just read it in a ready‑made voice, some can copy a voice from a short clip.</p>
+  </header>
+
+  <div class="how">
+    <b>How to use this:</b> Click <b>Open</b> on any card — it takes you to a free web demo (nothing to install).
+    Type some text, press generate, and listen or download the audio. Look for a demo marked
+    <span style="color:var(--accent);font-weight:600">Browser</span> — those run in a web page.
+    <b>Clone</b> means it can imitate a specific voice from a short sample.
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Kokoro</h3>
+      <div class="tags"><span class="tag browser">Browser</span><span class="tag clone-no">Clone: No</span></div>
+      <p class="desc">Fast, natural, lots of built‑in voices. The easiest “just read this nicely” option — great for narration.</p>
+      <a class="open" href="https://huggingface.co/spaces?search=kokoro%20tts" target="_blank" rel="noopener">Open demo →</a>
+    </div>
+
+    <div class="card">
+      <h3>Chatterbox</h3>
+      <div class="tags"><span class="tag browser">Browser</span><span class="tag clone-yes">Clone: Yes</span></div>
+      <p class="desc">Top‑rated open voice tool (beat ElevenLabs in blind tests). Give it ~10 seconds of a voice and it speaks in that voice.</p>
+      <a class="open" href="https://huggingface.co/spaces?search=chatterbox" target="_blank" rel="noopener">Open demo →</a>
+    </div>
+
+    <div class="card">
+      <h3>edge‑tts (Microsoft voices)</h3>
+      <div class="tags"><span class="tag browser">Browser</span><span class="tag clone-no">Clone: No</span></div>
+      <p class="desc">Hundreds of ready‑made voices in many accents and languages. Instant and clean — no copying voices, just lots of choices.</p>
+      <a class="open" href="https://huggingface.co/spaces?search=edge%20tts" target="_blank" rel="noopener">Open demo →</a>
+    </div>
+
+    <div class="card">
+      <h3>F5‑TTS</h3>
+      <div class="tags"><span class="tag browser">Browser</span><span class="tag clone-yes">Clone: Yes</span></div>
+      <p class="desc">Quick, high‑quality voice cloning from a short clip. A strong step up if Chatterbox isn’t quite right.</p>
+      <a class="open" href="https://huggingface.co/spaces?search=f5-tts" target="_blank" rel="noopener">Open demo →</a>
+    </div>
+
+    <div class="card">
+      <h3>XTTS v2 (Coqui)</h3>
+      <div class="tags"><span class="tag browser">Browser</span><span class="tag clone-yes">Clone: Yes</span></div>
+      <p class="desc">Well‑known voice cloner that works across many languages. A reliable all‑rounder.</p>
+      <a class="open" href="https://huggingface.co/spaces?search=xtts" target="_blank" rel="noopener">Open demo →</a>
+    </div>
+
+    <div class="card">
+      <h3>Dia (Nari Labs)</h3>
+      <div class="tags"><span class="tag browser">Browser</span><span class="tag clone-yes">Clone: Yes</span></div>
+      <p class="desc">Built for <b>two people talking</b> — write a little script and it voices a back‑and‑forth conversation.</p>
+      <a class="open" href="https://huggingface.co/spaces?search=dia%20tts" target="_blank" rel="noopener">Open demo →</a>
+    </div>
+
+    <div class="card">
+      <h3>Bark</h3>
+      <div class="tags"><span class="tag browser">Browser</span><span class="tag clone-no">Clone: No</span></div>
+      <p class="desc">The playful one — can laugh, sigh, and add emotion. Fun for expressive or character voices.</p>
+      <a class="open" href="https://huggingface.co/spaces?search=bark%20tts" target="_blank" rel="noopener">Open demo →</a>
+    </div>
+
+    <div class="card">
+      <h3>Fish / OpenAudio</h3>
+      <div class="tags"><span class="tag browser">Browser</span><span class="tag clone-yes">Clone: Yes</span></div>
+      <p class="desc">Very natural, often called the closest to ElevenLabs. Good when you want polish.</p>
+      <a class="open" href="https://huggingface.co/spaces?search=fish%20speech" target="_blank" rel="noopener">Open demo →</a>
+    </div>
+
+  </div>
+
+  <div class="power">
+    <h2>Want all of them in one app?</h2>
+    <p>If you have a Windows or Mac computer with a decent graphics card and don’t mind a one‑time setup,
+    <b>Pinokio</b> installs AI tools with a single click. Add its <b>Ultimate TTS Studio</b> app and you get
+    many of these engines (Kokoro, Chatterbox, F5, Fish and more) together in one simple interface —
+    a menu to try each without visiting separate websites.</p>
+    <a class="open" style="align-self:flex-start" href="https://pinokio.co" target="_blank" rel="noopener">Get Pinokio →</a>
+  </div>
+
+  <p class="note">
+    ⚠️ <b>A quick fairness note:</b> the “clone” tools can copy a real person’s voice. Only do that with the
+    person’s permission — use your own voice, or a made‑up / stock voice, and you’re all set.
+  </p>
+
+  <footer>Made to help you explore free AI voices • Pick one, type, listen. Have fun.</footer>
+</div>
+</body>
+</html>
